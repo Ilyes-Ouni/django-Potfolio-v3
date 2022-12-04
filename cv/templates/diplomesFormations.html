@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '../static/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '../static/css/bootstrap.min.css' %}">
+</head>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <!--Navbar-->
+    {% include "navbar.html" %}
+    <!--Fin Navbar-->
+    <div class="container">
+         <div class="row">
+        <div class="col-md-6" style="margin-top: 10%;">
+            <div class="col-md-12">
+                <h4>Compétences Linguistiques</h4>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center ">
+                <table>
+                    <tr>
+                        <th style="text-align: center;">Langue</th>
+                        <th style="text-align: center;">Niveau</th>
+                    </tr>
+                    {% for a in data.languageSkills %}
+                    <tr>
+                        <th>{{a.Langue}}</th>
+                        <th>{{a.Niveau}}</th>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 10%; margin-bottom: 5%;">
+            <div class="col-md-12">
+                <h4>Compétences Techniques</h4>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center ">
+                <table>
+                    <tr>
+                        <th style="text-align: center;">Titre</th>
+                        <th style="text-align: center;">Type</th>
+                        <th style="text-align: center;">Niveau</th>
+                    </tr>
+                    {% for a in data.technicalSkills %}
+                    <tr>
+                        <th>{{a.Titre}}</th>
+                        <th>{{a.Type}}</th>
+                        <th>{{a.Niveau}}</th>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

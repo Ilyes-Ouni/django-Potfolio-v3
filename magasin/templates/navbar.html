@@ -1,0 +1,47 @@
+<!--Navbar-->
+<Navbar>
+    <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+        <a class="navbar-brand col-2" href="">Ilyes El Ouni </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+            {% if request.user.is_authenticated %}
+                <li class="nav-item col-7">
+                    <a class="nav-link" href="{% url 'diplomesFormationsCRUD' %}">Diplomes et Formations</a>
+                </li>
+                <li class="nav-item col-6">
+                    <a class="nav-link" href="{% url 'typesFormationsCRUD' %}">Types de Formations</a>
+                </li>
+                <li class="nav-item col-6">
+                    <a class="nav-link" href="/admin">Administration</a>
+                </li>
+            {% else %}
+                <li class="nav-item col-3">
+                    <a class="nav-link" href="{% url 'cv' %}">Infos Générales</a>
+                </li>
+                <li class="nav-item col-3">
+                    <a class="nav-link" href="{% url 'competences' %}">Compétences</a>
+                </li>
+                <li class="nav-item col-4">
+                    <a class="nav-link" href="{% url 'DiplomesEtFormations' %}">Diplomes & Formations</a>
+                </li>
+                <li class="nav-item col-5">
+                    <a class="nav-link" href="{% url 'ExperiencesEtStages' %}">Expériences Professionnelles & Stages</a>
+                </li>
+            {% endif %}
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'disconnect' %}">Déconnexion</a>
+                </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="{% url 'diplomesFormationsCRUD' %}">[{{ request.session.username }}]</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'connect' %}">Connexion</a>
+                </li>
+                {% endif %}
+            </ul>
+    </nav>

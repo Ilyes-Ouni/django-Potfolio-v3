@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '../static/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '../static/css/bootstrap.min.css' %}">
+</head>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <!--Navbar-->
+    {% include "navbar.html" %}
+    <!--Fin Navbar-->
+    <div class="container">
+       <div style="margin-top: 10%;">
+        <div class="col-md-12">
+            <h4>Diplomes et Formations</h4>
+        </div>
+        <div class="col-md-12 d-flex justify-content-center ">
+            <table>
+                <tr>
+                    <th>Titre</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                </tr>
+                {% for a in data.diplomeFormation %}
+                <tr>
+                    <th>{{a.Titre}}</th>
+                    <th>{{a.Type}}</th>
+                    <th>{{a.date}}</th>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+  </div>
+</body>

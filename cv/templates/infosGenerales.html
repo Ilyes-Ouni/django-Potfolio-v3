@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '../static/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '../static/css/bootstrap.min.css' %}">
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+    <!--Navbar-->
+    {% include "navbar.html" %}
+    <!--Fin Navbar-->
+      <div class="row" style="width: 100%; margin-top: 5%; margin-bottom: 13%;">
+        <div class="col-md-8" style="text-align: center;">
+            <h1><strong>Ilyes El Ouni</strong></h1>
+            <h6 style="opacity: 0.6; margin-top: 2%;">🥇 IT Student | Full Stack Developer (Angular | ExpressJs) 🥇</h6>
+            <hr style="margin-left: 5%;">
+            <p style="opacity: 0.8;margin-left: 5%;">I'am eager to constantly develop my skills in order to ensure my professional development. I Believe in my ability to come up with interesting ideas and inventing website design. Strong creative and analytical skills. Team player with an eye
+                for detail. </p>
+        </div>
+        <div class="col-md-4">
+            <img src="../static/img/1656858167519.jpg" alt="profilPhoto" width="90%" style="border-radius: 50%;">
+        </div>
+    </div>
+    <div class="row d-flex justify-content-around" style="width: 100%; margin-top: 8%; margin-bottom: 15%;">
+        <div class="col-md-12">
+            <h4 style="text-align: center; margin-bottom: 3%;">
+                HOBBIES
+            </h4>
+        </div>
+        <div class="card col-md-3">
+            <img src="../static/img/developer_male.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align:center;">Web Development</h5>
+                <p class="card-text" style="text-align:justify;">It is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network
+                    services.
+                </p>
+            </div>
+        </div>
+
+        <div class="card col-md-3">
+            <img src="../static/img/3d-student-graduation-cap-books-stack.jpg" class="card-img-top">
+            <div class="card-body" style="margin-top: 25%;">
+                <h5 class="card-title" style="text-align:center;">Learning</h5>
+                <p class="card-text" style="text-align:justify;">It is the process of acquiring new understanding, knowledge, behaviors, skills, values, attitudes, and preferences.</p>
+            </div>
+        </div>
+
+        <div class="card col-md-3">
+            <img src="../static/img/stylzd_hand_3.jpg" class="card-img-top" width="100%">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Writing</h5>
+                <p class="card-text" style="text-align:justify;">It is a medium of human communication which involves the representation of a language through a system of physically inscribed, mechanically transferred, or digitally represented symbols.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row" style="width: 100%;  margin-bottom: 5%;">
+        <div class="col-md-6">
+            <img src="../static/img/socialLife1.png" alt="profilPhoto" width="100%" height="120%" style="border-radius: 0 10px 10px 0;">
+        </div>
+        <div class="col-md-6" style="text-align: start;">
+            <h4 style="text-align:center;">SOCIAL LIFE</h4>
+            <ul style="margin-top: 10%;">
+                <li style="margin-left: 10%;">
+                    <p>Google Developer Student Clubs Nabeul <small>(Ex-RH)       2021 - 2022</small></p>
+                </li>
+                <li style="margin-left: 10%;">
+                    <p>Tunisia88 <small>(Ex-Leader)      2019-2020</small></p>
+                </li>
+                <li style="margin-left: 10%;">
+                    <p>Tunivision ISET Nabeul <small>(Ex-Membre)      2021 - 2021</small></p>
+                </li>
+                <li style="margin-left: 10%;">
+                    <p>Tunisian red crescent Nabeul local committee <small>(Ex-Membre)      2018 - Present</small></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</body>
+
+</html>
