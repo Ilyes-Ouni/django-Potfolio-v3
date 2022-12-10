@@ -29,47 +29,31 @@
     <!--Navbar-->
     {% include "navbar.html" %}
     <!--Fin Navbar-->
-    <div class="container">
-         <div class="row">
-        <div class="col-md-6" style="margin-top: 10%;">
-            <div class="col-md-12">
-                <h4>Compétences Linguistiques</h4>
-            </div>
-            <div class="col-md-12 d-flex justify-content-center ">
-                <table>
-                    <tr>
-                        <th style="text-align: center;">Langue</th>
-                        <th style="text-align: center;">Niveau</th>
-                    </tr>
-                    {% for a in data.languageSkills %}
-                    <tr>
-                        <th>{{a.Langue}}</th>
-                        <th>{{a.Niveau}}</th>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
+      <div class="container">
+       <div style="margin-top: 10%;">
+        <div class="col-md-12">
+            <h4>Diplomes et Formations</h4>
         </div>
-        <div class="col-md-6" style="margin-top: 10%; margin-bottom: 5%;">
-            <div class="col-md-12">
-                <h4>Compétences Techniques</h4>
-            </div>
-            <div class="col-md-12 d-flex justify-content-center ">
-                <table>
-                    <tr>
-                        <th style="text-align: center;">Titre</th>
-                        <th style="text-align: center;">Type</th>
-                        <th style="text-align: center;">Niveau</th>
-                    </tr>
-                    {% for a in data.technicalSkills %}
-                    <tr>
-                        <th>{{a.Titre}}</th>
-                        <th>{{a.Type}}</th>
-                        <th>{{a.Niveau}}</th>
-                    </tr>
+        <div class="col-md-12 d-flex justify-content-center ">
+            <table>
+                <tr>
+                    <th>Titre</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                </tr>
+                {% for a in data.listeDiplomesFormations %}
+                <tr>
+                    <th>{{a.Titre}}</th>
+                    {% for type in data.listeTypes %}
+                        {% if type.id == a.Type_id %}
+                            <th>{{type.nom}}</th>
+                        {% endif %}
                     {% endfor %}
-                </table>
-            </div>
+                    <th>{{a.date}}</th>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
-    </div>
+  </div>
+</body>
