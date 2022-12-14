@@ -29,29 +29,6 @@
     <!--Navbar-->
     {% include "navbar.html" %}
     <!--Fin Navbar-->
-    <div class="container">
-  <div style="margin-top: 10%;">
-        <div class="col-md-12">
-            <h4>Compétences Linguistiques</h4>
-        </div>
-        <div class="col-md-12 d-flex justify-content-center ">
-            <table>
-                <tr>
-                    <th>Titre</th>
-                    <th>Entreprise</th>
-                    <th class="col-md-2">Date Début</th>
-                    <th class="col-md-2">Date Fin</th>
-                </tr>
-                {% for a in data.listeExperiencesStages %}
-                <tr>
-                    <th>{{a.Titre}}</th>
-                    <th>{{a.Entreprise}}</th>
-                    <th>{{a.dateDebut}}</th>
-                    <th>{{a.dateFin}}</th>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
-    </div>
-    </div>
+   
+    // BODY
 </body>
