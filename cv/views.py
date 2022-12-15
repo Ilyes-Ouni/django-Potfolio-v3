@@ -8,48 +8,7 @@ from configuration.models import competences, diplomesFormations, experiencesSta
 
 # ajouter import du modele Article ici 
 def index(request):
- context = {
-    'name': 'Ilyes El Ouni',
-    'title': '🥇 IT Student | Full Stack Developer (Angular | ExpressJs) 🥇',
-    'bio': 'Iam eager to constantly develop my skills in order to ensure my professional development. I Believe in my ability to come up with interesting ideas and inventing website design. Strong creative and analytical skills. Team player with an eye for detail.',
-    'Hobbies': [
-        {
-           'nom': 'Web Development',
-           'description': 'It is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services',
-        },
-        {
-           'nom': 'Web Development',
-           'description': 'It is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services',
-        },
-        {
-           'nom': 'Writing',
-           'description': 'It is a medium of human communication which involves the representation of a language through a system of physically inscribed, mechanically transferred, or digitally represented symbols',
-        }
-    ],
-    'SocialLife': {
-        'social1':{
-            'nom': 'Google Developer Student Clubs Nabeul',
-            'position':'Ex-RH',
-            'period':'2021-2022',
-        }, 
-        'social2':{
-            'nom': 'Tunisia88',
-            'position':'Ex-Leader',
-            'period': '2019-2020',
-        },
-        'social3':{
-            'nom': 'Tunivision ISET Nabeul',
-            'position':'Ex-Membre',
-            'period':'2021-2021'
-        },
-        'social4':{
-            'nom': 'Tunisian red crescent Nabeul local committee',
-            'position':'Ex-Membre',
-            'period':'2018 - Present'
-        },
-    }
- }
- return render(request, 'infosGenerales.html', {'data':context})
+ return render(request, 'infosGenerales.html')
 
 
 
